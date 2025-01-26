@@ -1,6 +1,7 @@
 package appsecao015arquivosmanipularpastas;
 
 import java.io.File;
+import java.nio.file.Files;
 import java.util.Scanner;
 
 public class Program {
@@ -19,6 +20,13 @@ public class Program {
         for (File folder : folders) {
             System.out.println(folder);
         }
+        File[] files = path.listFiles(File::isFile);
+        System.out.println("Files:");
+        for (File file : files) {
+            System.out.println(file);
+        }
+        
+        
 		sc.close();
 	}
 
